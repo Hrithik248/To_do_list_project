@@ -1,0 +1,22 @@
+{
+  "name": "to_do_app",
+  "version": "1.0.0",
+  "description": "To_do_list_project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Simple",
+    "To",
+    "to",
+    "list",
+    "web",
+    "app"
+  ],
+  "author": "Hrithik kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
