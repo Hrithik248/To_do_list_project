@@ -3,6 +3,7 @@ const port= 8000;
 const app=express();
 const bodyParser=require('body-parser'); 
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static('./assets'));
 //use express router
 app.use('/',require('./routes'));
 // set up view engine
