@@ -6,6 +6,7 @@
       crossorigin="anonymous"
   ></script>
   <link rel="stylesheet" type="text/css" href="/css/home.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
   </head>
   <body>
@@ -30,15 +31,15 @@
       </div>
       <hr/>
       <button id="add-task" class="button-85" type="submit"><i class="fa-solid fa-plus fa-beat"></i>ADD TASK</button>
-      <a href="delete-task"><button id="delete-task" class="button-85"><i class="fa-solid fa-trash"></i>DELETE TASK</button></a>
     </form>
+    <button id="delete-button" class="button-85"><i class="fa-solid fa-trash"></i>DELETE TASK</button>
     <hr/>
     <ul>
         <%for(let i of tasks){%>
             <li>
                 <div class="list-item-con">
                   <div class="task-check">
-                    <a href="toggle-task/?id=<%=i._id%>"><input type="checkbox"/></a>
+                    <input name="c-box" type="checkbox" class="c-box" id="<%=i._id%>"/>
                   </div>
                   <div class="item-desc"><div><b><%=i.description%></b></div><div><i class="fa-solid fa-calendar-days"></i><%=i.date%></div></div>
                   <div class="item-type-con"><div class="item-type <%=i.category%>"><div><%=i.category%></div></div></div>
@@ -46,5 +47,6 @@
               </li>
         <%}%>
     </ul>
+    <script src="/javascript/home.js"></script>
   </body>
 </html>

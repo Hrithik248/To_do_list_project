@@ -9,6 +9,6 @@ const toggle_task_controller=require('../controllers/toggle_task_controller');
 console.log(typeof delete_task_controller,typeof home_controller);
 router.get('/',home_controller);
 router.post('/create-task',create_task_controller);
-router.get('/delete-task',delete_task_controller);
-router.get('/toggle-task',toggle_task_controller);
+router.post('/delete-task',delete_task_controller);
+//router.get('/toggle-task',toggle_task_controller);
 module.exports=router;
