@@ -6,7 +6,7 @@ const home_controller=require('../controllers/home_controller');
 const delete_task_controller=require('../controllers/delete_task_controller');
 const create_task_controller=require('../controllers/create_task_controller');
 const toggle_task_controller=require('../controllers/toggle_task_controller');
-console.log(typeof delete_task_controller,typeof home_controller);
+//console.log(typeof delete_task_controller,typeof home_controller);
 router.get('/',home_controller);
 router.post('/create-task',create_task_controller);
 router.post('/delete-task',delete_task_controller);
