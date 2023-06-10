@@ -1,3 +1,5 @@
+//script file connected to home.ejs which adds a custom event listener to delete button
+//on clicking delete task button all the id of selected task are fetched and sent to delete task controller using ajax post request
 var deleteButton=document.getElementById('delete-button');
 deleteButton.addEventListener('click',function(e){
     e.preventDefault(); 
@@ -6,31 +8,16 @@ deleteButton.addEventListener('click',function(e){
     for(let i=0;i<selectedTasks.length;i++){
         selectedTasksId[i]=selectedTasks[i].id;
     }
+    //ajax post request sending id of selected tasks
     $.ajax({
         url: '/delete-task',
         method: 'POST',
         data: {selectedTasksId},
-        success: function(data, textStatus, jqXHR){
-            console.log('hjbfdv');
-            alert("Success: " + response); 
-            location.reload();
-            //window.location.reload();
+        success: function(){
+            location.reload(); 
         },
         error: function(jqXHR, textStatus, errorThrown){
-            console.log('errrr');
-            alert("Error"); 
+            alert("Error",errorThrown); 
         }
-    });
-    location.reload();  
-        /*
-        success:function(data){
-            console.log('successs');
-            console.log(window.location="/");
-        },
-        error:function(err){
-            console.log(err);
-        }
-       });*/
-
-       //console.log('im here');
+    })
 });

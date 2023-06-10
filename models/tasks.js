@@ -1,4 +1,5 @@
 const mongoose=require('mongoose');
+//task data schema
 const taskSchema= new mongoose.Schema({
     description:{
         type: String,
@@ -10,10 +11,6 @@ const taskSchema= new mongoose.Schema({
     },
     category:{
         type: String,
-        required: true
-    },
-    checked:{
-        type: Boolean
     }
 });
 const task=mongoose.model('task',taskSchema);
