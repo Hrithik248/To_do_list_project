@@ -14,6 +14,7 @@ deleteButton.addEventListener('click',function(e){
         method: 'POST',
         data: {selectedTasksId},
         success: function(){
+            //reloading the page home page after success of delete request
             location.reload(); 
         },
         error: function(jqXHR, textStatus, errorThrown){
